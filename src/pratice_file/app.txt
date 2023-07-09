@@ -1,0 +1,26 @@
+import React, {Component} from 'react'
+
+import CardList from './Card-list'
+
+class App extends Component = {
+    constructor () {
+        super()
+        this.state = {
+            monsters = [],
+            searchField = ''
+        }
+    }
+
+    ComponentDidMount() {
+        fetch("").then(response => response.json).
+        then(users => setState({monsters : users}))
+    }
+
+    render() {
+        return(
+            <div>
+                <CardList monsters={this.state.monsters}/>
+            </div>
+        )
+    }
+}
